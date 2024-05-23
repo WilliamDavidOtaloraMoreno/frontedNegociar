@@ -38,12 +38,12 @@ export const Footer = () => {
               </div>
               <div className="footer-list-29 footer-2">
                   <ul>
-                      <h6 className="footer-title-29">Useful Links</h6>
-                      <li><a href="services.html">Management</a></li>
-                      <li><a href="services.html">Reporting</a></li>
-                      <li><a href="services.html">Tracking</a></li>
-                      <li><a href="services.html">All Users</a></li>
-                      <li><a href="contact.html">Support</a></li>
+                      <h6 className="footer-title-29">Enlaces Utiles</h6>
+                      <li><a href="services.html">Informes</a></li>
+                      <li><a href="services.html">Soporte</a></li>
+                      <li><a href="services.html"></a></li>
+                      <li><a href="services.html"></a></li>
+                      <li><a href="contact.html"></a></li>
                   </ul>
               </div>
               <div className="footer-list-29 footer-3">
@@ -57,11 +57,11 @@ export const Footer = () => {
               <div className="footer-list-29 footer-4">
                   <ul>
                       <h6 className="footer-title-29">Enlaces Rapidos</h6>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="services.html">Services</a></li>
-                      <li><a href="#"> Blog</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="about.html">Nosotros</a></li>
+                      <li><a href="services.html">Bienes Raices</a></li>
+                      <li><a href="#"> </a></li>
+                      <li><a href="contact.html">Contacto</a></li>
                   </ul>
               </div>
           </div>

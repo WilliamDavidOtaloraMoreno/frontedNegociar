@@ -5,7 +5,7 @@ export const All = () => {
     <>
       <section className="form-12" id="home">
         <div className="form-12-content">
-          <div className="container">
+          <div className="container ">
             <div className="grid grid-column-2 ">
               <div className="column2">
               </div>
