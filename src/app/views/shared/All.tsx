@@ -1,6 +1,22 @@
-import React from 'react';
+import Properties from 'app/models/Properties';
+import ServicePrivate from '../../server/ServerPrivate';
+import ApiBack from '../../utilities/domains/ApiBack';
+import React, { useEffect, useState } from 'react';
 
 export const All = () => {
+
+  // const [show, setShow] = useState(false);
+  const [arrayProperties, setArrayProperties] = useState<Properties[]>([]);
+
+  const getViewProperty = async () =>{
+    const result = await ServicePrivate.petitionGET(ApiBack.PROPERTY_VIEW_SIX);
+    setArrayProperties(result);
+  }
+
+  useEffect(() =>{
+    getViewProperty();
+  },[]);
+
   return (
     <>
       <section className="form-12" id="home">
@@ -44,32 +60,23 @@ export const All = () => {
               <p className="my-3 head" style={{ textAlign: 'justify' }}> Bienvenido a nuestra exclusiva colección de propiedades en venta. Si estás buscando tu hogar ideal, una oportunidad de inversión o un lugar especial para construir recuerdos, has llegado al sitio indicado. Nuestra amplia gama de propiedades incluye desde acogedores apartamentos urbanos hasta encantadoras casas familiares.</p>
             </div>
             <div className="row mt-5 pt-3">
-              <div className="grids4-info  col-lg-4 col-md-6">
-                <a href="#"><img src="/src/assets/img/g3.jpg" className="img-fluid" alt="" /></a>
+              {arrayProperties.map((myProperty, contador)=>(
+                <div className="grids4-info  col-lg-4 col-md-6">
+                {/* <a href="#"> */}
+                  <img src={myProperty.imgBase64} className="img-fluid" alt={myProperty.nameImg} />
+                  {/* </a> */}
                 <ul className="location-top">
                   <li className="rent">Para Renta</li>
                 </ul>
                 <div className="info-bg">
-                  <h5><a href="#">Luxury Apartment In chelsea</a></h5>
-                  <p>$ 450,000 $777 / sqft</p>
+                  <h5><a href="/das">{myProperty.title}</a></h5>
+                  <p>{myProperty.price}</p>
                   <ul>
-                    <p>Descripcion</p>
+                    <p>{myProperty.description}</p>
                   </ul>
                 </div>
               </div>
-              <div className="grids4-info col-lg-4 col-md-6 mt-md-0 mt-5">
-                <a href="#"><img src="assets/images/g8.jpg" className="img-fluid" alt="" /></a>
-                <ul className="location-top">
-                  <li className="sale">Para Venta</li>
-                </ul>
-                <div className="info-bg">
-                  <h5><a href="#">Nature-Friendly Family Houses</a></h5>
-                  <p>$ 1,350 / per month</p>
-                  <ul>
-                    <p>Descripcion</p>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
