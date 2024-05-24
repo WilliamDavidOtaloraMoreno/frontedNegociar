@@ -1,3 +1,4 @@
+
 export const Footer = () => {
     return(
         <>
@@ -57,7 +58,7 @@ export const Footer = () => {
               <div className="footer-list-29 footer-4">
                   <ul>
                       <h6 className="footer-title-29">Enlaces Rapidos</h6>
-                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="/">Inicio</a></li>
                       <li><a href="about.html">Nosotros</a></li>
                       <li><a href="services.html">Bienes Raices</a></li>
                       <li><a href="#"> </a></li>

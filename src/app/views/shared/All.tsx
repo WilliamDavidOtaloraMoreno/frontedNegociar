@@ -1,4 +1,11 @@
 import React from 'react';
+import c1 from '../../../assets/img/c1.jpg'
+import c2 from '../../../assets/img/c2.jpg'
+import c3 from '../../../assets/img/c3.jpg'
+import g3 from '../../../assets/img/g3.jpg'
+import g8 from '../../../assets/img/g8.jpg'
+
+
 
 export const All = () => {
   return (
@@ -45,7 +52,7 @@ export const All = () => {
             </div>
             <div className="row mt-5 pt-3">
               <div className="grids4-info  col-lg-4 col-md-6">
-                <a href="#"><img src="/src/assets/img/g3.jpg" className="img-fluid" alt="" /></a>
+                <a href="#"><img src={g3} className="img-fluid" alt="" /></a>
                 <ul className="location-top">
                   <li className="rent">Para Renta</li>
                 </ul>
@@ -58,7 +65,7 @@ export const All = () => {
                 </div>
               </div>
               <div className="grids4-info col-lg-4 col-md-6 mt-md-0 mt-5">
-                <a href="#"><img src="assets/images/g8.jpg" className="img-fluid" alt="" /></a>
+                <a href="#"><img src={g8} className="img-fluid" alt="" /></a>
                 <ul className="location-top">
                   <li className="sale">Para Venta</li>
                 </ul>
@@ -92,7 +99,7 @@ export const All = () => {
                   <div className="customer row py-5 mt-3">
                     <div className="col-lg-4 col-md-6">
                       <div className="card">
-                        <img className="card-img-top img-responsive" src="assets/images/c1.jpg" alt="" />
+                        <img className="card-img-top img-responsive" src={c1} alt="" />
                         <div className="card-body">
                           <span className="fa fa-quote-left" aria-hidden="true"></span>
                           <h3 className="card-title">Henry Nicholas</h3>
@@ -107,7 +114,7 @@ export const All = () => {
                     </div>
                     <div className="col-lg-4 col-md-6 off-testi-2">
                       <div className="card">
-                        <img className="card-img-top img-responsive" src="assets/images/c2.jpg" alt="" />
+                        <img className="card-img-top img-responsive" src={c2} alt="" />
                         <div className="card-body">
                           <span className="fa fa-quote-left" aria-hidden="true"></span>
                           <h3 className="card-title">Mark Waugh</h3>
@@ -122,7 +129,7 @@ export const All = () => {
                     </div>
                     <div className="col-lg-4 offset-md-3 offset-lg-0 col-md-6 off-testi">
                       <div className="card">
-                        <img className="card-img-top img-responsive" src="assets/images/c3.jpg" alt="" />
+                        <img className="card-img-top img-responsive" src={c3} alt="" />
                         <div className="card-body">
                           <span className="fa fa-quote-left" aria-hidden="true"></span>
                           <h3 className="card-title">Sarina Willams</h3>

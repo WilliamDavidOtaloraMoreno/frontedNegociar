@@ -12456,6 +12456,56 @@ h4.sub-title {
   .w3l-service-breadcrum .breadcrum-bg h2 {
     font-size: 35px; } }
 
+    .tooltip-inner, .mat-tooltip {
+      color: #333 !important;
+      line-height: 1.5em;
+      background: #fff;
+      border: none;
+      border-radius: 4px !important;
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+  .tooltip, .tooltip.in {
+    /* opacity: 1; */
+  }
+  
+  .tooltip.in {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  
+  .tooltip {
+      opacity: 0;
+      transition: opacity, transform 0.2s ease;
+      transform: translateY(5px);
+  }
+  
+  .tooltip.left .tooltip-arrow {
+      border-left-color: #fff;
+  }
+  
+  .tooltip.right .tooltip-arrow {
+      border-right-color: #fff;
+  }
+  
+  .tooltip.top .tooltip-arrow {
+      border-top-color: #fff;
+  }
+  
+  .tooltip.bottom .tooltip-arrow {
+      border-bottom-color: #fff;
+  }
+  
+  .tooltip-inner, .mat-tooltip {
+      padding: 10px 15px;
+      min-width: 130px;
+  }
+  
+  .mat-tooltip {
+      text-align: center;
+  }
+  
+
 /* my styles*/
 
 .linea-color {
@@ -12463,4 +12513,6 @@ h4.sub-title {
   height: 5px; /* Puedes ajustar el grosor de la línea aquí */
   background-color: #eec52a; /* Cambia este color al que desees */
 }
+
+
 
