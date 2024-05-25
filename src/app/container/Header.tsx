@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Header = () => {
     return(
         <>
@@ -24,7 +26,7 @@ export const Header = () => {
 <section className="w3l-bootstrap-header">
   <nav className="navbar navbar-expand-lg navbar-light py-lg-2 py-2 fixed-top navbar-fixed">
     <div className="container">
-      <a className="navbar-brand" href="index.html"><span className="fa fa-home"></span> Negociar.com</a>
+      <a className="navbar-brand" href="/"><span className="fa fa-home"></span> Negociar.com</a>
      
     {/* <a className="navbar-brand" href="#index.html">
         <img src="image-path" alt="Your logo" title="Your logo" style={{height:'35px'}} />
@@ -37,13 +39,13 @@ export const Header = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a className="nav-link" href="index.html">Inicio</a>
+            <a className="nav-link" href="/">Inicio</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="about.html">Nosotros</a>
           </li>
            <li className="nav-item">
-            <a className="nav-link" href="services.html">Bienes Raíces</a>
+            <a className="nav-link" href="/realStates">Bienes Raíces</a>
           </li>
         
           <li className="nav-item mr-0">
