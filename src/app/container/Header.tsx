@@ -11,8 +11,6 @@ export const Header = () => {
 			<li>Siguenos!</li>
 			<li><a href="#"><span className="fa fa-facebook"></span></a></li>
 			<li><a href="#"><span className="fa fa-instagram"></span></a> </li>
-				<li><a href="#"><span className="fa fa-twitter"></span></a></li>
-				<li><a href="#"><span className="fa fa-vimeo"></span></a> </li>
 		</div>
 		<div className="accounts col-lg-9 col-6">
 				<li className="top_li"><span className="fa fa-mobile"></span><a href="tel:+142 5897555">+142 5897555</a> </li>

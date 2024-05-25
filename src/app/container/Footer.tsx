@@ -31,10 +31,7 @@ export const Footer = () => {
                   <div className="main-social-footer-29">
                     <h6 className="footer-title-29">Redes Sociales</h6>
                       <a href="#facebook" className="facebook"><span className="fa fa-facebook"></span></a>
-                      <a href="#twitter" className="twitter"><span className="fa fa-twitter"></span></a>
                       <a href="#instagram" className="instagram"><span className="fa fa-instagram"></span></a>
-                      <a href="#google-plus" className="google-plus"><span className="fa fa-google-plus"></span></a>
-                      <a href="#linkedin" className="linkedin"><span className="fa fa-linkedin"></span></a>
                   </div>
               </div>
               <div className="footer-list-29 footer-2">

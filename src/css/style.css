@@ -12456,55 +12456,7 @@ h4.sub-title {
   .w3l-service-breadcrum .breadcrum-bg h2 {
     font-size: 35px; } }
 
-    .tooltip-inner, .mat-tooltip {
-      color: #333 !important;
-      line-height: 1.5em;
-      background: #fff;
-      border: none;
-      border-radius: 4px !important;
-      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  }
-  
-  .tooltip, .tooltip.in {
-    /* opacity: 1; */
-  }
-  
-  .tooltip.in {
-      opacity: 1;
-      transform: translateY(0px);
-  }
-  
-  .tooltip {
-      opacity: 0;
-      transition: opacity, transform 0.2s ease;
-      transform: translateY(5px);
-  }
-  
-  .tooltip.left .tooltip-arrow {
-      border-left-color: #fff;
-  }
-  
-  .tooltip.right .tooltip-arrow {
-      border-right-color: #fff;
-  }
-  
-  .tooltip.top .tooltip-arrow {
-      border-top-color: #fff;
-  }
-  
-  .tooltip.bottom .tooltip-arrow {
-      border-bottom-color: #fff;
-  }
-  
-  .tooltip-inner, .mat-tooltip {
-      padding: 10px 15px;
-      min-width: 130px;
-  }
-  
-  .mat-tooltip {
-      text-align: center;
-  }
-  
+
 
 /* my styles*/
 
@@ -12514,5 +12466,53 @@ h4.sub-title {
   background-color: #eec52a; /* Cambia este color al que desees */
 }
 
+.profile-card-5 {
+  margin-top: 20px;
+}
+
+.profile-card-5 .btn {
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 7px 20px;
+}
+
+.profile-card-5 .card-img-block {
+  width: 91%;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+
+}
+
+.profile-card-5 .card-img-block img {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+
+.profile-card-5 h5 {
+  color: #4E5E30;
+  font-weight: 600;
+}
+
+.profile-card-5 p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.profile-card-5 .btn-primary {
+  background-color: #4E5E30;
+  border-color: #4E5E30;
+}
+
+.profile-card-5 {
+  transition: transform 0.3s ease;
+}
+
+.profile-card-5:hover,
+.profile-card-5:focus {
+  transform: scale(1.05); /* Escala un poco la tarjeta al ser seleccionada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+}
 
 
