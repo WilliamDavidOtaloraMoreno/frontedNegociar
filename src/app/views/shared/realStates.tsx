@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Tooltip } from '@mui/material';
 import { styled } from '@mui/material/styles'; // Solo si necesitas un efecto ripple específico
-import c3 from '../../../assets/img/c3.jpg'
+import g3 from '../../../assets/img/g3.jpg'
 
 export const realStates = () =>{
   
@@ -23,60 +23,37 @@ export const realStates = () =>{
     <div className="container py-lg-3">
       <div className="features-with-17-top_sur">
         <div className="row">
-        <div className="col-md-4">
-      <div className="card card-product" data-count="1">
-        <div data-header-animation="true" className="card-header card-header-image">
-          <a href="#pablo">
-            <img src={c3} className="img" alt="Card" />
-          </a>
+        <div className="col-md-4 mt-4">
+                <div className="card profile-card-5">
+                    <div className="card-img-block">
+                        <img className="card-img-top" src={g3} alt="Card image cap"/>
+                    </div>
+                    <div className="card-body pt-0">
+                        <h5 className="card-title">Florence Pink</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-4 mt-4">
+                <div className="card profile-card-5">
+                    <div className="card-img-block">
+                        <img className="card-img-top" src={g3} alt="Card image cap"/>
+                    </div>
+                    <div className="card-body pt-0">
+                        <h5 className="card-title">Florence Pink</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="card-body">
-          <div className="card-actions text-center">
-            <Tooltip title="Fix Header!">
-              <Button variant="contained" color="error" className="btn btn-danger btn-link">
-                <i className="material-icons">build</i> Fix Header!
-              </Button>
-            </Tooltip>
-            <Tooltip title="View">
-              <Button variant="contained" className="btn btn-default btn-link">
-                <i className="material-icons">art_track</i>
-              </Button>
-            </Tooltip>
-            <Tooltip title="Edit">
-              <Button variant="contained" color="success" className="btn btn-success btn-link">
-                <i className="material-icons">edit</i>
-              </Button>
-            </Tooltip>
-            <Tooltip title="Remove">
-              <Button variant="contained" color="error" className="btn btn-danger btn-link">
-                <i className="material-icons">close</i>
-              </Button>
-            </Tooltip>
-          </div>
-          <h4 className="card-title">
-            <a href="#pablo">Cozy 5 Stars Apartment</a>
-          </h4>
-          <div className="card-description">
-            The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
-          </div>
-        </div>
-        <div className="card-footer">
-          <div className="price">
-            <h4>$899/night</h4>
-          </div>
-          <div className="stats">
-            <p className="card-category">
-              <i className="material-icons">place</i> Barcelona, Spain
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
 
         </div>
       </div>
-    </div>
-  </div>
+    
+  
 </section>
 <section className="w3-about-2">
 <div className="w3-services py-5">
@@ -85,9 +62,11 @@ export const realStates = () =>{
         <div className="row w3-services-grids py-lg-5">
           
             <div className="col-lg-7 w3-services-right-grid mt-lg-0">
-                <h4>Are you planning to buy a House?</h4>
-                <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. On the other hand we denounce with righteous indignation.</p>
-                <a className="btn btn-secondary btn-theme3 mt-3" href="contact.html"> Contact Us</a>
+                <h4>¿Estás pensando en comprar una propiedad?</h4>
+                <p className="mt-3" style={{ textAlign: 'justify' }}>En nuestra página inmobiliaria, 
+                te ofrecemos una amplia gama de opciones para que encuentres la propiedad perfecta para ti. Ya sea que estés buscando tu 
+                primera casa, un lugar más grande para tu familia o una inversión lucrativa, estamos aquí para ayudarte a alcanzar tus metas. </p>
+                <a className="btn btn-secondary btn-theme3 mt-3" href="contact.html"> Contactanos</a>
             </div>
             <div className="col-lg-5 w3-services-left-grid">
              
@@ -101,52 +80,18 @@ export const realStates = () =>{
     <div className="container py-lg-3">
       
         <div className="heading text-center mx-auto">
-            <h3 className="head">Our Best Features</h3>
-            <p className="my-3 head "> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-              Nulla mollis dapibus nunc, ut rhoncus
-              turpis sodales quis. Integer sit amet mattis quam.</p>
+            <h3 className="head">Nuestras Mejores Propiedades</h3>
+            <p className="my-3 head "style={{ textAlign: 'justify' }}> En nuestra exclusiva selección de propiedades, encontrarás verdaderas joyas 
+            que encarnan el lujo, la comodidad y el estilo de vida que deseas.
+            Cada una de estas residencias ha sido cuidadosamente seleccionada
+             por su calidad, diseño y ubicación privilegiada. Prepárate para ser
+            cautivado por la belleza y el encanto
+             de nuestras mejores propiedades. ¡Descubre tu próxima residencia de ensueño con nosotros!</p>
           </div>
-        <div className="row mt-5 pt-3">
-            <div className="col-lg-4 col-md-6">
-                <div className="card">
-                    
-                    <h4 className="mission">Search Property from Anywhere</h4>
-                    <div className="icon-holder">
-                        <span className="fa fa-certificate service-icon" aria-hidden="true"></span>
-                    </div>
-                    <div className="open-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minima. It is a long established fact that a reader will be distracted by the readable.</p>
-                     
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mt-md-0 mt-5 pt-md-0 pt-3">
-                <div className="card">
-                   
-                    <h4 className="mission">Professional & Friendly Agents</h4>
-                    <div className="icon-holder">
-                        <span className="fa fa-user service-icon" aria-hidden="true"></span>
-                    </div>
-                    <div className="open-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minima. It is a long established fact that a reader will be distracted by the readable.</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mt-lg-0 mt-5 pt-lg-0 pt-3">
-                <div className="card">
-                   
-                    <h4 className="mission">Buy and Sell Awesome Property</h4>
-                    <div className="icon-holder">
-                        <span className="fa fa-home service-icon" aria-hidden="true"></span>
-                    </div>
-                    <div className="open-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minima. It is a long established fact that a reader will be distracted by the readable.</p>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
+      
+           
+      
+        
     </div>
 </div>
 </section>
