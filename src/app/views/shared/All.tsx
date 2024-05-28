@@ -66,25 +66,43 @@ export const All = () => {
               <h3 className="head">Propiedades en venta</h3>
               <p className="my-3 head" style={{ textAlign: 'justify' }}> Bienvenido a nuestra exclusiva colección de propiedades en venta. Si estás buscando tu hogar ideal, una oportunidad de inversión o un lugar especial para construir recuerdos, has llegado al sitio indicado. Nuestra amplia gama de propiedades incluye desde acogedores apartamentos urbanos hasta encantadoras casas familiares.</p>
             </div>
+          
+
             <div className="row mt-5 pt-3">
-              {arrayProperties.map((myProperty, contador)=>(
-                <div className="grids4-info  col-lg-4 col-md-6">
-                {/* <a href="#"> */}
-                  <img src={myProperty.imgBase64} className="img-fluid" alt={myProperty.nameImg} />
-                  {/* </a> */}
-                <ul className="location-top">
-                  <li className="rent">Para Renta</li>
-                </ul>
-                <div className="info-bg">
-                  <h5><a href="/das">{myProperty.title}</a></h5>
-                  <p>{myProperty.price}</p>
-                  <ul>
-                    <p>{myProperty.description}</p>
-                  </ul>
-                </div>
-              </div>
-              ))}
+      {arrayProperties.map((myProperty,contador)=>( 
+    <div className="profile-card-4 text-center">
+      <img src={myProperty.imgBase64} className="img img-responsive" alt={myProperty.nameImg}/>
+        <div className="profile-content">
+            <div className="profile-name">{myProperty.title}
             </div>
+            <div className="profile-description"><h6>PRECIO</h6>{myProperty.price}</div>
+            <div className="row">
+                <div className="col-4">
+                    <div className="profile-overview">
+                        <p>Area</p>
+                        <h4>150m</h4></div>
+                </div>
+                <div className="col-4">
+                    <div className="profile-overview">
+                        <p>Habitaciones</p>
+                        <h4>5</h4></div>
+                </div>
+                <div className="col-4">
+                    <div className="profile-overview">
+                        <p>Baños</p>
+                        <h4>2</h4></div>
+                </div>
+                
+            </div>
+           
+        </div>
+      
+    </div>
+))}
+</div>
+	
+
+            
           </div>
         </section>
       </section>
