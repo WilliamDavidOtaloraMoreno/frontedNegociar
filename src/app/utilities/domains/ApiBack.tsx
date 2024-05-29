@@ -6,6 +6,7 @@ const ApiBack = {
     PROPERTY_VIEW_SIX: "property/viewsix",
     PROPERTY_SORT: "property/sortByPrice",
 
-    PROPERTY_NEIGHOOD: "neighbor/view"
+    PROPERTY_NEIGHOOD: "neighbor/view",
+    PROPERTY_VIEW_CREATE: "property/create"
 }
 export default ApiBack;

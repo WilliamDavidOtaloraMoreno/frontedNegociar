@@ -26,14 +26,14 @@ class ServicePrivate {
   //Servicio con bearer para hacer peticiones POST
   //*******************************************************************
   public static async peticionPOST(urlServicio: string, miJSON: any) {
-    //const bearer = "Bearer " + String(localStorage.getItem("tokenUsta"));
+   /* const bearer = "Bearer " + String(localStorage.getItem("tokenUsta"));*/
 
     const datosEnviar = {
       method: "POST",
       body: JSON.stringify(miJSON),
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
-        //authorization: bearer,
+        // authorization: bearer,
       },
     };
 
