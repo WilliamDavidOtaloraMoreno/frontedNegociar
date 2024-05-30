@@ -13,7 +13,7 @@ export const Header = () => {
 			<li><a href="#"><span className="fa fa-instagram"></span></a> </li>
 		</div>
 		<div className="accounts col-lg-9 col-6">
-				<li className="top_li"><span className="fa fa-mobile"></span><a href="tel:+142 5897555">+142 5897555</a> </li>
+				<li className="top_li"><span className="fa fa-mobile"></span><a href="tel:3112224299">3112224299</a> </li>
 				<li className="top_li1"><Link to="/login">Iniciar Sesión</Link></li>
 		</div>
 		
@@ -42,14 +42,14 @@ export const Header = () => {
             <a className="nav-link" href="/">Inicio</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="about.html">Nosotros</a>
+            <Link className="nav-link" to="about.html" title="Nosotros">Nosotros</Link>
           </li>
            <li className="nav-item">
-            <a className="nav-link" href="/realStates">Bienes Raíces</a>
+            <Link className="nav-link" to="/real-states" title="Bienes Raíces" replace={false}>Bienes Raíces</Link>
           </li>
         
           <li className="nav-item mr-0">
-            <a className="nav-link" href="contact.html">Contacto</a>
+            <Link className="nav-link" to="contact.html">Contacto</Link>
           </li>
         </ul>
        

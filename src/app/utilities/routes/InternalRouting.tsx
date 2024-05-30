@@ -32,7 +32,7 @@ export const InternalRouting = () => {
   return (
     <Routes>
       <Route path="/" element={<LazyAll />} />
-      <Route path="/realStates" element={<LazyrealStates />} />
+      <Route path="/real-states" element={<LazyrealStates />} />
       <Route path="/search-results" element={<LazyrealSearch />} />
       {/*Use the guard for the jwt and use the mitoken for use the routes in app*/}
       <Route path="/login" element={<LazyLogin />} />
