@@ -1,4 +1,4 @@
-class neighborhoods{
+class Neighborhoods{
 
     public neighborhoodId: number;
     public name: string;
@@ -8,4 +8,4 @@ class neighborhoods{
         this.name = name;
     }
 }
-export default neighborhoods;
+export default Neighborhoods;

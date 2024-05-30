@@ -11,8 +11,12 @@ class Properties {
   public propertyType: string;
   public nameImg: string;
   public imgBase64: string;
-  public neignborhoodName: Neighborhoods;
+  public neighborhoodId: number;
   public estratoSocial: string;
+  public areaConstruida: string;
+  public bannos: string;
+  public habitaciones: string;
+  public parqueadero: string;
 
   constructor(
     properid: number,
@@ -25,8 +29,12 @@ class Properties {
     propertyType: string,
     nameImg: string,
     imgBase64: string,
-    neig: Neighborhoods,
-    estratoSocial: string
+    neig: number,
+    estratoSocial: string,
+    areaConstruida: string,
+    bannos: string,
+    habitaciones: string,
+    parqueadero: string
   ) {
     this.propertyId = properid;
     this.title = title;
@@ -38,8 +46,12 @@ class Properties {
     this.propertyType = propertyType;
     this.nameImg = nameImg;
     this.imgBase64 = imgBase64;
-    this.neignborhoodName = neig;
+    this.neighborhoodId = neig;
     this.estratoSocial = estratoSocial;
+    this.areaConstruida = areaConstruida;
+    this.bannos = bannos;
+    this.habitaciones = habitaciones;
+    this.parqueadero = parqueadero;
   }
 }
 export default Properties;
