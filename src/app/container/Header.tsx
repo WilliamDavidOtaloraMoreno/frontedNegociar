@@ -42,14 +42,14 @@ export const Header = () => {
             <a className="nav-link" href="/">Inicio</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="about.html">Nosotros</a>
+            <a className="nav-link" href="/aboutUs">Nosotros</a>
           </li>
            <li className="nav-item">
             <a className="nav-link" href="/realStates">Bienes Raíces</a>
           </li>
         
           <li className="nav-item mr-0">
-            <a className="nav-link" href="contact.html">Contacto</a>
+            <a className="nav-link" href="/contact">Contacto</a>
           </li>
         </ul>
        
