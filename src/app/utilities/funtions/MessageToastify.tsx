@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const MensajeToastify = (tipo: string, texto: string, milisegundos: number) => {
+export const MessageToastify = (tipo: string, texto: string, milisegundos: number) => {
   const opcion = String(tipo.toLowerCase());
   switch (opcion) {
     case "error":

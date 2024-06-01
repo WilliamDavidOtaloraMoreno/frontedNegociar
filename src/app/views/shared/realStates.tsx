@@ -19,6 +19,7 @@ export const RealStates = () => {
         const data = await response.json();
         setProperties(data);
         setlimit(data.limit);
+        
       } catch (error) {
         console.error("Error fetching properties:", error);
       }
@@ -29,10 +30,12 @@ export const RealStates = () => {
 
   const handlePreviousPage = () => {
     setPage((prevPage) => prevPage - 1); // Ajusta el valor mínimo de la página a 1
+    window.scrollTo(0, 0);
   };
 
   const handleNextPage = () => {
     setPage((prevPage) => prevPage + 1); // Ajusta el valor máximo de la página al total de páginas
+    window.scrollTo(0, 0);
   };
   return (
     <>
@@ -48,47 +51,51 @@ export const RealStates = () => {
           <div className="container py-lg-3">
             <div className="features-with-17-top_sur">
               <div className="row">
-                {Array.isArray(properties) && properties.map((myProperty, contador) =>(
-                  <div className="col-md-4 mt-4">
-                  <div className="card profile-card-5">
-                    <div className="card-img-block">
-                      <img
-                        className="card-img-top"
-                        src={myProperty.imgBase64}
-                        alt={myProperty.nameImg}
-                      />
+                {Array.isArray(properties) &&
+                  properties.map((myProperty, contador) => (
+                    <div className="col-md-4 mt-4">
+                      <div className="card profile-card-5">
+                        <div className="card-img-block">
+                          <img
+                            className="card-img-top"
+                            src={myProperty.imgBase64}
+                            alt={myProperty.nameImg}
+                          />
+                        </div>
+                        <div className="card-body pt-0">
+                          <h5 className="card-title">{myProperty.title}</h5>
+                          <p className="card-text">
+                            <li>
+                              <ul>${myProperty.price}</ul>
+                              <ul>{myProperty.address}</ul>
+                              <ul>{myProperty.state}</ul>
+                            </li>
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="card-body pt-0">
-                      <h5 className="card-title">{myProperty.title}</h5>
-                      <p className="card-text">
-                        <li>
-                          <ul>${myProperty.price}</ul>
-                          <ul>{myProperty.address}</ul>
-                          <ul>{myProperty.state}</ul>
-                        </li>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                ))}
-                
-                <div>
-                    <button onClick={handlePreviousPage} disabled={page === 1}>
-                      Previous
-                    </button>
-                    <span>
-                      {" "}
-                      Page {page} of {limit}{" "}
-                    </span>
-                    <button
-                      onClick={handleNextPage}
-                      disabled={page === limit}
-                    >
-                      Next
-                    </button>
-                  </div>
+                  ))}
               </div>
             </div>
+          </div>
+          <div className="d-flex align-items-center justify-content-center m-3">
+            <nav className="inline-flex space-x-2.5 justify-content-center">
+              <button
+                className="flex items-center py-2 px-3 rounded font-medium select-none border text-gray-900 dark:text-white bg-white dark:bg-gray-800 transition-colors hover:border-blue-600 hover:bg-blue-400 hover:text-white dark:hover:text-white"
+                onClick={handlePreviousPage}
+                disabled={page === 1}
+              >
+                ⪻ Anterior
+              </button>
+              &nbsp;
+              <button
+                className="flex items-center py-2 px-3 rounded font-medium select-none border text-gray-900 dark:text-white bg-white dark:bg-gray-800 transition-colors hover:border-blue-600 hover:bg-blue-400 hover:text-white dark:hover:text-white"
+                onClick={handleNextPage}
+                disabled={page === limit}
+              >
+                Sigiente ⪼
+              </button>
+            </nav>
           </div>
         </div>
       </section>
