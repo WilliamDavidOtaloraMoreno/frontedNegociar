@@ -4,10 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 export const Header = () => {
   const navigate = useNavigate();
 
+
   const logout = () => {
     localStorage.removeItem("miToken");
     navigate("/login");
   };
+
 
   let opciones: any[] = optionAdmin;
 
