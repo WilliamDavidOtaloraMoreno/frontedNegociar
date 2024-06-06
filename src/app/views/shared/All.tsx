@@ -17,6 +17,7 @@ export const All = () => {
   const getViewProperty = async () => {
     const result = await ServicePrivate.petitionGET(ApiBack.PROPERTY_VIEW_SIX);
     setArrayProperties(result);
+    console.log(result);
   };
 
   useEffect(() => {
@@ -143,44 +144,57 @@ export const All = () => {
                 casas familiares.
               </p>
             </div>
-          
 
             <div className="row mt-5 pt-3">
-
-      {arrayProperties.map((myProperty,contador)=>( 
-    <div className="profile-card-4 text-center">
-      <img src={myProperty.imgBase64} className="img img-responsive" alt={myProperty.nameImg}/>
-        <div className="profile-content">
-            <div className="profile-name">{myProperty.title}
+              {arrayProperties.map((myProperty, contador) => (
+                <div
+                  className="profile-card-4 text-center"
+                  key={myProperty.propertyId}
+                >
+                  {Array.isArray(myProperty.images) &&
+                  myProperty.images.length > 0 ? (
+                    <img
+                      src={myProperty.images[0].image_base64}
+                      className="img img-responsive"
+                      alt={myProperty.images[0].name_img}
+                    />
+                  ) : (
+                    <img
+                      src="URL_A_IMAGEN_POR_DEFECTO"
+                      className="img img-responsive"
+                      alt="Imagen no disponible"
+                    />
+                  )}
+                  <div className="profile-content">
+                    <div className="profile-name">{myProperty.title}</div>
+                    <div className="profile-description">
+                      <h6>PRECIO</h6>
+                      {myProperty.price}
+                    </div>
+                    <div className="row">
+                      <div className="col-4">
+                        <div className="profile-overview">
+                          <p>Area</p>
+                          <h4>{myProperty.areaConstruida}m</h4>
+                        </div>
+                      </div>
+                      <div className="col-4">
+                        <div className="profile-overview">
+                          <p>Habitaciones</p>
+                          <h4>{myProperty.habitaciones}</h4>
+                        </div>
+                      </div>
+                      <div className="col-4">
+                        <div className="profile-overview">
+                          <p>Baños</p>
+                          <h4>{myProperty.bannos}</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="profile-description"><h6>PRECIO</h6>{myProperty.price}</div>
-            <div className="row">
-                <div className="col-4">
-                    <div className="profile-overview">
-                        <p>Area</p>
-                        <h4>{myProperty.areaConstruida}m</h4></div>
-                </div>
-                <div className="col-4">
-                    <div className="profile-overview">
-                        <p>Habitaciones</p>
-                        <h4>{myProperty.habitaciones}</h4></div>
-                </div>
-                <div className="col-4">
-                    <div className="profile-overview">
-                        <p>Baños</p>
-                        <h4>{myProperty.bannos}</h4></div>
-                </div>
-                
-            </div>
-
-        </div>
-      
-    </div>
-))}
-</div>
-	
-
-            
           </div>
         </section>
       </section>

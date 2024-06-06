@@ -1,4 +1,5 @@
 import Neighborhoods from "./Neighborhoods";
+import PropertyImages from "./PropertyImages";
 
 class Properties {
   public propertyId: number;
@@ -9,8 +10,7 @@ class Properties {
   public city: string;
   public state: string;
   public propertyType: string;
-  public nameImg: string;
-  public imgBase64: string;
+  public images: PropertyImages[];
   public neighborhoodId: number;
   public estratoSocial: string;
   public areaConstruida: string;
@@ -27,8 +27,7 @@ class Properties {
     city: string,
     state: string,
     propertyType: string,
-    nameImg: string,
-    imgBase64: string,
+    images: PropertyImages[],
     neig: number,
     estratoSocial: string,
     areaConstruida: string,
@@ -44,8 +43,7 @@ class Properties {
     this.city = city;
     this.state = state;
     this.propertyType = propertyType;
-    this.nameImg = nameImg;
-    this.imgBase64 = imgBase64;
+    this.images = images;
     this.neighborhoodId = neig;
     this.estratoSocial = estratoSocial;
     this.areaConstruida = areaConstruida;

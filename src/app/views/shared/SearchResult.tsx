@@ -5,7 +5,7 @@ import ServicePrivate from "../../server/ServerPrivate";
 import ApiBack from "../../utilities/domains/ApiBack";
 
 export const SearchResults = () => {
-  const [properties, setProperties] = useState<Properties[]>([]);
+  const [myProperties, setProperties] = useState<Properties[]>([]);
   const location = useLocation();
 
   const fetchProperties = async (query: string) => {
@@ -129,36 +129,48 @@ export const SearchResults = () => {
         </div>
         <div className="col-lg-8 col-sm-12">
           <div className="row mt-5 pt-3">
-            {properties.map((property, index) => (
-              <div className="profile-card-4 text-center">
-                <img
-                  src={property.imgBase64}
-                  className="img img-responsive"
-                  alt={property.nameImg}
-                />
+            {myProperties.map((myProperty, index) => (
+                <div
+                className="profile-card-4 text-center"
+                key={myProperty.propertyId}
+              >
+                {Array.isArray(myProperty.images) &&
+                myProperty.images.length > 0 ? (
+                  <img
+                    src={myProperty.images[0].image_base64}
+                    className="img img-responsive"
+                    alt={myProperty.images[0].name_img}
+                  />
+                ) : (
+                  <img
+                    src="URL_A_IMAGEN_POR_DEFECTO"
+                    className="img img-responsive"
+                    alt="Imagen no disponible"
+                  />
+                )}
                 <div className="profile-content">
-                  <div className="profile-name">{property.title}</div>
+                  <div className="profile-name">{myProperty.title}</div>
                   <div className="profile-description">
                     <h6>PRECIO</h6>
-                    {property.price}
+                    {myProperty.price}
                   </div>
                   <div className="row">
                     <div className="col-4">
                       <div className="profile-overview">
                         <p>Area</p>
-                        <h4>{property.areaConstruida} m</h4>
+                        <h4>{myProperty.areaConstruida}m</h4>
                       </div>
                     </div>
                     <div className="col-4">
                       <div className="profile-overview">
                         <p>Habitaciones</p>
-                        <h4>{property.habitaciones}</h4>
+                        <h4>{myProperty.habitaciones}</h4>
                       </div>
                     </div>
                     <div className="col-4">
                       <div className="profile-overview">
                         <p>Baños</p>
-                        <h4>{property.bannos}</h4>
+                        <h4>{myProperty.bannos}</h4>
                       </div>
                     </div>
                   </div>

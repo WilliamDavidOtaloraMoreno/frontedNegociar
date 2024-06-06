@@ -1,5 +1,6 @@
 const ApiBack = {
-    URL: "http://localhost:3123/api/",  
+     URL: "http://localhost:3123/api/",
+    // URL: "https://deploynegociar.onrender.com/api/",
 
     //Login
     LOGIN: "user/login",
