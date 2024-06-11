@@ -6,9 +6,9 @@ import SearchResults from "../../views/shared/SearchResult";
 import { Login } from "../../views/private/Login";
 import { PropertyForm } from "../../views/private/PropertyForm";
 import { Guard } from "../../guard/Guard";
-import { AboutUs } from "../../views/shared/AboutUs"
-import { Contact } from "../../views/shared/Contact"
-import { PropertyInfo } from "../../views/shared/PropertyInfo"
+import { AboutUs } from "../../views/shared/AboutUs";
+import { Contact } from "../../views/shared/Contact";
+import { PropertyInfo } from "../../views/shared/PropertyInfo";
 
 const LazyAll = lazy(() =>
   import("../../views/shared/All").then(() => ({ default: All }))
@@ -21,11 +21,17 @@ const LazyrealSearch = lazy(() =>
     default: SearchResults,
   }))
 );
-const LazyAboutUs = lazy(()=> import("../../views/shared/AboutUs").then(()=>({default:AboutUs})))
-const LazyContact = lazy(()=> import("../../views/shared/Contact").then(()=>({default:Contact})))
-const LazyPropertyInfo = lazy(()=> import("../../views/shared/PropertyInfo").then(()=>({default:PropertyInfo})))
-
-
+const LazyAboutUs = lazy(() =>
+  import("../../views/shared/AboutUs").then(() => ({ default: AboutUs }))
+);
+const LazyContact = lazy(() =>
+  import("../../views/shared/Contact").then(() => ({ default: Contact }))
+);
+const LazyPropertyInfo = lazy(() =>
+  import("../../views/shared/PropertyInfo").then(() => ({
+    default: PropertyInfo,
+  }))
+);
 
 const LazyLogin = lazy(() =>
   import("../../views/private/Login").then(() => ({ default: Login }))
@@ -37,24 +43,21 @@ const LazyPropertyForm = lazy(() =>
 );
 
 export const InternalRouting = () => {
-
   return (
     <Routes>
       <Route path="/" element={<LazyAll />} />
       <Route path="/real-states" element={<LazyrealStates />} />
       <Route path="/search-results" element={<LazyrealSearch />} />
-      <Route path="/aboutUs" element={<LazyAboutUs/>}/>
-            <Route path="/contact" element={<LazyContact/>}/>
-            <Route path="/propertyinfo" element={<LazyPropertyInfo/>}/>
+      <Route path="/aboutUs" element={<LazyAboutUs />} />
+      <Route path="/contact" element={<LazyContact />} />
+      <Route path="/propertyinfo" element={<LazyPropertyInfo />} />
       {/*Use the guard for the jwt and use the mitoken for use the routes in app*/}
       <Route path="/login" element={<LazyLogin />} />
       <Route element={<Guard />}>
         <Route path="/propertyForm" element={<LazyPropertyForm />} />
       </Route>
-      <Route path="/aboutUs" element={<LazyAboutUs/>}/>
-            <Route path="/contact" element={<LazyContact/>}/>
-            <Route path="/propertyinfo" element={<LazyPropertyInfo/>}/>
+      <Route path="/aboutUs" element={<LazyAboutUs />} />
+      <Route path="/contact" element={<LazyContact />} />
     </Routes>
   );
 };
-
