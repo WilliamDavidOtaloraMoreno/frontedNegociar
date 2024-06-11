@@ -9,6 +9,7 @@ import { Guard } from "../../guard/Guard";
 import { AboutUs } from "../../views/shared/AboutUs"
 import { Contact } from "../../views/shared/Contact"
 import { PropertyInfo } from "../../views/shared/PropertyInfo"
+import { Dashboard } from "../../views/private/Dashboard";
 
 const LazyAll = lazy(() =>
   import("../../views/shared/All").then(() => ({ default: All }))
@@ -36,6 +37,12 @@ const LazyPropertyForm = lazy(() =>
   }))
 );
 
+const LazyDashboard = lazy(() =>
+  import("../../views/private/Dashboard").then(() => ({
+    default: Dashboard,
+  }))
+);
+
 export const InternalRouting = () => {
 
   return (
@@ -48,12 +55,14 @@ export const InternalRouting = () => {
             <Route path="/propertyinfo" element={<LazyPropertyInfo/>}/>
       {/*Use the guard for the jwt and use the mitoken for use the routes in app*/}
       <Route path="/login" element={<LazyLogin />} />
-      <Route element={<Guard />}>
+      {/* <Route element={<Guard />}>
         <Route path="/propertyForm" element={<LazyPropertyForm />} />
-      </Route>
+      </Route> */}
+      <Route path="/propertyForm" element={<LazyPropertyForm />}/>
       <Route path="/aboutUs" element={<LazyAboutUs/>}/>
             <Route path="/contact" element={<LazyContact/>}/>
             <Route path="/propertyinfo" element={<LazyPropertyInfo/>}/>
+            <Route path="/dashboard" element={<LazyDashboard/>}/>
     </Routes>
   );
 };
