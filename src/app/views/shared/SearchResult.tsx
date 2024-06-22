@@ -7,6 +7,7 @@ import ApiBack from "../../utilities/domains/ApiBack";
 export const SearchResults = () => {
   const [myProperties, setProperties] = useState<Properties[]>([]);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const fetchProperties = async (query: string) => {
     const result = await ServicePrivate.petitionGET(
@@ -23,6 +24,10 @@ export const SearchResults = () => {
   const [neighbors, setNeighbors] = useState("");
 
   const history = useNavigate();
+
+  const handleCardClick = (propertyId: number) => {
+    navigate(`/propertyinfo/${propertyId}`);
+  };
 
   const handleSearch = (e: any) => {
     e.preventDefault();
@@ -133,6 +138,8 @@ export const SearchResults = () => {
                 <div
                 className="profile-card-4 text-center"
                 key={myProperty.propertyId}
+                onClick={() => handleCardClick(myProperty.propertyId)}
+                style={{ cursor: 'pointer' }}
               >
                 {Array.isArray(myProperty.images) &&
                 myProperty.images.length > 0 ? (

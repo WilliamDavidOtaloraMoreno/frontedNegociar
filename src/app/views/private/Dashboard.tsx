@@ -53,7 +53,7 @@ export const Dashboard: React.FC = () => {
 
   const deleteItem = async (id: number) => {
     try {
-      await fetch(`${ApiBack.URL}${ApiBack.PROPERTY_VIEW_ALL}/${id}`, {
+      await fetch(`${ApiBack.URL}${ApiBack.PROPERTY_DELETE}/${id}`, {
         method: 'DELETE',
       });
       setProperties(properties.filter(property => property.propertyId !== id));

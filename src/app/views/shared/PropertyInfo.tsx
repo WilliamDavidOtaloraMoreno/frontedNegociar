@@ -198,12 +198,6 @@ export const PropertyInfo = () => {
                   </Col>
                   <Col xs={6} sm={4}>
                     <p className="text-secondary mb-1">
-                      <FaUtensils size={18} /> Cocina
-                    </p>
-                    <p>Equipada</p>
-                  </Col>
-                  <Col xs={6} sm={4}>
-                    <p className="text-secondary mb-1">
                       <FaBed size={18} /> Habitaciones
                     </p>
                     <p>4</p>

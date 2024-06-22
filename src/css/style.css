@@ -2340,7 +2340,7 @@ Author URL: http://w3layouts.com
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #000;
-  --secondary: #02ad88;
+  --secondary: #eec52a;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -9420,7 +9420,7 @@ a.text-primary:hover, a.text-primary:focus {
   color: black !important; }
 
 .text-secondary {
-  color: #02ad88 !important; }
+  color: #1e316f !important; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #01614d !important; }
@@ -9556,7 +9556,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 :root {
   --theme-color: #eec52a;
-  --secondary-color: #02ad88;
+  --secondary-color: #eec52a;
   --opposite-color: #1e316f;
   --text-color: #585858;
   --title-color: #1e316f;

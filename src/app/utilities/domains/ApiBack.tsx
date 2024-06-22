@@ -12,6 +12,7 @@ const ApiBack = {
     PROPERTY_COUNT: "property/count",
     PROPERTY_VIEW_ONE: "property/viewOne",
     PROPERTY_IMAGEN: "property/viewOneImagen",
+    PROPERTY_DELETE: "property/delete",
 
     PROPERTY_NEIGHOOD: "neighbor/view",
     PROPERTY_VIEW_CREATE: "property/create",

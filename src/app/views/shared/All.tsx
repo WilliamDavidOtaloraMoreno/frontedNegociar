@@ -13,6 +13,7 @@ export const All = () => {
   // const [show, setShow] = useState(false);
   const [arrayProperties, setArrayProperties] = useState<Properties[]>([]);
   const [searchProperties, setSearchProperties] = useState("");
+  const navigate = useNavigate();
 
   const getViewProperty = async () => {
     const result = await ServicePrivate.petitionGET(ApiBack.PROPERTY_VIEW_SIX);
@@ -32,6 +33,10 @@ export const All = () => {
   const [neighbors, setNeighbors] = useState("");
 
   const history = useNavigate();
+
+  const handleCardClick = (propertyId: number) => {
+    navigate(`/propertyinfo/${propertyId}`);
+  };
 
   const handleSearch = (e: any) => {
     e.preventDefault();
@@ -86,7 +91,7 @@ export const All = () => {
                       <select
                         value={stratum}
                         onChange={(e) => setStratum(e.target.value)}
-                        className="form-control"
+                        className="form-control-search centered-placeholder"
                       >
                         <option value="">Estrato</option>
                         <option value="1">1</option>
@@ -99,7 +104,7 @@ export const All = () => {
                       <select
                         value={propertyType}
                         onChange={(e) => setPropertyType(e.target.value)}
-                        className="form-control"
+                        className="form-control-search centered-placeholder"
                       >
                         <option value="">Tipo de Propiedad</option>
                         <option value="1">Apartamento</option>
@@ -110,7 +115,7 @@ export const All = () => {
                       <select
                         value={state}
                         onChange={(e) => setState(e.target.value)}
-                        className="form-control"
+                        className="form-control-search centered-placeholder"
                       >
                         <option value="">Estado</option>
                         <option value="1">Nuevo</option>
@@ -150,6 +155,8 @@ export const All = () => {
                 <div
                   className="profile-card-4 text-center"
                   key={myProperty.propertyId}
+                  onClick={() => handleCardClick(myProperty.propertyId)}
+                      style={{ cursor: 'pointer' }}
                 >
                   {Array.isArray(myProperty.images) &&
                   myProperty.images.length > 0 ? (
@@ -197,305 +204,6 @@ export const All = () => {
             </div>
           </div>
         </section>
-      </section>
-      <section className="w3l-testimonials" id="testimonials">
-        <div className="customers-6-content py-5">
-          <div className="container py-lg-3">
-            <div className="heading text-center mx-auto">
-              <h3 className="head">Clientes Felices</h3>
-              <p className="my-3 head" style={{ textAlign: "justify" }}>
-                En nuestra inmobiliaria, la satisfacción de nuestros clientes es
-                nuestra mayor prioridad. Nos enorgullece haber ayudado a
-                numerosas personas y familias a encontrar el hogar de sus sueños
-                y a realizar inversiones inmobiliarias exitosas. Aquí te
-                presentamos algunas de las experiencias de nuestros clientes
-                felices que han confiado en nosotros para sus necesidades
-                inmobiliarias.
-              </p>
-            </div>
-            <div
-              id="customerhnyCarousel"
-              className="carousel slide"
-              data-ride="carousel"
-            >
-              <ol className="carousel-indicators">
-                <li
-                  data-target="#customerhnyCarousel"
-                  data-slide-to="0"
-                  className="active"
-                ></li>
-                <li data-target="#customerhnyCarousel" data-slide-to="1"></li>
-                <li data-target="#customerhnyCarousel" data-slide-to="2"></li>
-              </ol>
-              <div className="carousel-inner pb-5">
-                <div className="carousel-item active">
-                  <div className="customer row py-5 mt-3">
-                    <div className="col-lg-4 col-md-6">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src={c1}
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Henry Nicholas</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 off-testi-2">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src={c2}
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Mark Waugh</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 offset-md-3 offset-lg-0 col-md-6 off-testi">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src={c3}
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Sarina Willams</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="customer row py-5 mt-3">
-                    <div className="col-lg-4 col-md-6">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src="assets/images/c2.jpg"
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Mark Waugh</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 off-testi-2">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src="assets/images/c3.jpg"
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Sarina Willams</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 offset-md-3 offset-lg-0 col-md-6 off-testi">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src="assets/images/c1.jpg"
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Henry Nicholas</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="customer row py-5 mt-3">
-                    <div className="col-lg-4 col-md-6">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src="assets/images/c3.jpg"
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Sarina Willams</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 off-testi-2">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src="assets/images/c2.jpg"
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Mark Waugh</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 offset-md-3 offset-lg-0 col-md-6 off-testi">
-                      <div className="card">
-                        <img
-                          className="card-img-top img-responsive"
-                          src="assets/images/c1.jpg"
-                          alt=""
-                        />
-                        <div className="card-body">
-                          <span
-                            className="fa fa-quote-left"
-                            aria-hidden="true"
-                          ></span>
-                          <h3 className="card-title">Henry Nicholas</h3>
-                          <p className="sub-title mb-3">Engineer</p>
-                          <p className="card-text text-center mb-4">
-                            {" "}
-                            Lorem ipsum dolor sit amet, Ea consequuntur illum
-                            facere aperiam sequi optio
-                          </p>
-                          <div className="text-right">
-                            <span
-                              className="fa fa-quote-right"
-                              aria-hidden="true"
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <section className="w3l-specifications-9">
         <div className="main-w3 py-5" id="stats">
