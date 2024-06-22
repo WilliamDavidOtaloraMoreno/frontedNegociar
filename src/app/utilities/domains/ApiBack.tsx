@@ -10,9 +10,12 @@ const ApiBack = {
     PROPERTY_VIEW_SIX: "property/viewsix",
     PROPERTY_SORT: "property/sortByPrice",
     PROPERTY_COUNT: "property/count",
+    PROPERTY_VIEW_ONE: "property/viewOne",
+    PROPERTY_IMAGEN: "property/viewOneImagen",
 
     PROPERTY_NEIGHOOD: "neighbor/view",
     PROPERTY_VIEW_CREATE: "property/create",
+    PROPERTY_VIEW_UPDATE: "property/update",
     //Neighborhood
     NEIGHBOR_VIEW: "neighbor/view"
 }

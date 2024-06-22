@@ -112,7 +112,7 @@ export const Header = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about" title="Nosotros">
+                  <Link className="nav-link" to="/aboutUs" title="Nosotros">
                     Nosotros
                   </Link>
                 </li>
