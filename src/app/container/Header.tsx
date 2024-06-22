@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { optionAdmin } from "../utilities/domains/OptionSistem";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,7 +10,19 @@ export const Header = () => {
     localStorage.removeItem("miToken");
     navigate("/login");
   };
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
 
+  const handlePointerDown = (event: React.PointerEvent) => {
+    if (menuToggleRef.current) {
+      menuToggleRef.current.setPointerCapture(event.pointerId);
+    }
+  };
+
+  const handlePointerUp = (event: React.PointerEvent) => {
+    if (menuToggleRef.current) {
+      menuToggleRef.current.releasePointerCapture(event.pointerId);
+    }
+  };
 
   let opciones: any[] = optionAdmin;
 
@@ -41,7 +54,7 @@ export const Header = () => {
                           Cerrar Sesión
                         </Link>
                       </li>
-                      {opciones.map((opcion, indice) => (
+                      {/* {opciones.map((opcion, indice) => (
                         <li className="nav-item" key={"li" + indice}>
                           <a
                             className="nav-link collapsed"
@@ -70,7 +83,7 @@ export const Header = () => {
                             )}
                           </ul>
                         </li>
-                      ))}
+                      ))} */}
                     </ul>
                   ) : (
                     <li className="top_li1">
@@ -85,57 +98,57 @@ export const Header = () => {
         <div className="linea-color"></div>
       </section>
       <section className="w3l-bootstrap-header">
-        <nav className="navbar navbar-expand-lg navbar-light py-lg-2 py-2 fixed-top navbar-fixed">
-          <div className="container">
-            <a className="navbar-brand" href="/">
-              <span className="fa fa-home"></span> Negociar.com
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon fa fa-bars"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    Inicio
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about" title="Nosotros">
-                    Nosotros
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    to="/real-states"
-                    title="Bienes Raíces"
-                    replace={false}
-                  >
-                    Bienes Raíces
-                  </Link>
-                </li>
-                <li className="nav-item mr-0">
-                  <Link className="nav-link" to="/contact">
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </div>
+      <nav className="navbar navbar-expand-lg navbar-light py-lg-2 py-2 fixed-top navbar-fixed">
+        <div className="container">
+          <a className="navbar-brand" href="/">
+            <span className="fa fa-home"></span> Negociar.com
+          </a>
+          <button
+            ref={menuToggleRef}
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
+          >
+            <span className="navbar-toggler-icon fa fa-bars"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Inicio
+                </a>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/aboutUs" title="Nosotros">
+                  Nosotros
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  to="/real-states"
+                  title="Bienes Raíces"
+                  replace={false}
+                >
+                  Bienes Raíces
+                </Link>
+              </li>
+              <li className="nav-item mr-0">
+                <Link className="nav-link" to="/contact">
+                  Contacto
+                </Link>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </section>
+        </div>
+      </nav>
+    </section>
     </>
   );
 };

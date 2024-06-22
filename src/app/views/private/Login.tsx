@@ -44,9 +44,8 @@ export const Login = () => {
       if (result.miToken) {
         const objJWT: any = jwtDecode(result.miToken);
         console.log(objJWT);
-        
         localStorage.setItem("miToken", result.miToken);
-        myNavigate("/propertyForm");
+        myNavigate("/dashboard");
         setProcess(false);
       } else {
         cleanBoxs(formCurrent);

@@ -5,10 +5,11 @@ import { RealStates } from "../../views/shared/realStates";
 import SearchResults from "../../views/shared/SearchResult";
 import { Login } from "../../views/private/Login";
 import { PropertyForm } from "../../views/private/PropertyForm";
+import { PropertyFormUpdate } from "../../views/private/PropertyFormUpdate";
 import { Guard } from "../../guard/Guard";
-import { AboutUs } from "../../views/shared/AboutUs"
-import { Contact } from "../../views/shared/Contact"
-import { PropertyInfo } from "../../views/shared/PropertyInfo"
+import { AboutUs } from "../../views/shared/AboutUs";
+import { Contact } from "../../views/shared/Contact";
+import { PropertyInfo } from "../../views/shared/PropertyInfo";
 import { Dashboard } from "../../views/private/Dashboard";
 
 const LazyAll = lazy(() =>
@@ -43,6 +44,12 @@ const LazyPropertyForm = lazy(() =>
   }))
 );
 
+const LazyPropertyFormUpdate = lazy(() =>
+  import("../../views/private/PropertyFormUpdate").then((module) => ({
+    default: module.PropertyFormUpdate,
+  }))
+);
+
 const LazyDashboard = lazy(() =>
   import("../../views/private/Dashboard").then(() => ({
     default: Dashboard,
@@ -57,17 +64,21 @@ export const InternalRouting = () => {
       <Route path="/search-results" element={<LazyrealSearch />} />
       <Route path="/aboutUs" element={<LazyAboutUs />} />
       <Route path="/contact" element={<LazyContact />} />
-      <Route path="/propertyinfo" element={<LazyPropertyInfo />} />
+      <Route path="/propertyinfo/:propertyId" element={<LazyPropertyInfo />} />
       {/*Use the guard for the jwt and use the mitoken for use the routes in app*/}
       <Route path="/login" element={<LazyLogin />} />
       <Route element={<Guard />}>
         <Route path="/propertyForm" element={<LazyPropertyForm />} />
-        <Route path="/dashboard" element={<LazyDashboard/>}/>
+        <Route path="/propertyForm" element={<LazyPropertyForm />} />
+        <Route
+          path="/propertyFormUpdate/:propertyId"
+          element={<LazyPropertyFormUpdate />}
+        />
+        <Route path="/dashboard" element={<LazyDashboard />} />
       </Route>
-      <Route path="/aboutUs" element={<LazyAboutUs/>}/>
-            <Route path="/contact" element={<LazyContact/>}/>
-            <Route path="/propertyinfo" element={<LazyPropertyInfo/>}/>
-            
+      <Route path="/aboutUs" element={<LazyAboutUs />} />
+      <Route path="/contact" element={<LazyContact />} />
+      <Route path="/propertyinfo" element={<LazyPropertyInfo />} />
     </Routes>
   );
 };

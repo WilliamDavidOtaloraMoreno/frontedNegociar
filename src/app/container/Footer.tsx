@@ -35,8 +35,10 @@ export const Footer = () => {
                 <h6 className="footer-title-29">Sobre Nosotros</h6>
                 <ul>
                   <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et
-                    ultrices posuere cubilia Curae
+                    Negociar.com.co se dedica a simplificar y optimizar el
+                    proceso de compra y venta de vehículos e inmuebles en Tunja,
+                    Boyacá, brindando un servicio excepcional y una experiencia
+                    de usuario inigualable.
                   </p>
                 </ul>
                 <div className="main-social-footer-29">
@@ -86,13 +88,13 @@ export const Footer = () => {
                     <a href="/">Inicio</a>
                   </li>
                   <li>
-                    <Link to="about.html">Nosotros</Link>
+                    <Link to="/aboutUs">Nosotros</Link>
                   </li>
                   <li>
-                    <Link to="real_states">Bienes Raices</Link>
+                    <Link to="/real-states">Bienes Raices</Link>
                   </li>
                   <li>
-                    <Link to="contact.html">Contacto</Link>
+                    <Link to="/contact">Contacto</Link>
                   </li>
                 </ul>
               </div>

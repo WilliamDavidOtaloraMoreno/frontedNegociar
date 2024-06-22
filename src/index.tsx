@@ -8,6 +8,9 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./css/style.css"
 
+import 'jquery/dist/jquery.min.js';
+import '@popperjs/core/dist/umd/popper.min.js';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

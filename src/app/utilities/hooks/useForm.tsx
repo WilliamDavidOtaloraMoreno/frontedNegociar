@@ -13,6 +13,7 @@ export const useForm = <T extends Object>(ObjectInit: T) => {
     });
   };
   return {
+    setMyObject,
     myObject,
     doubleLink,
     ...myObject,

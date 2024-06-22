@@ -19,7 +19,7 @@ class Properties {
   public parqueadero: string;
 
   constructor(
-    properid: number,
+    properId: number,
     title: string,
     description: string,
     price: number,
@@ -35,7 +35,7 @@ class Properties {
     habitaciones: string,
     parqueadero: string
   ) {
-    this.propertyId = properid;
+    this.propertyId = properId;
     this.title = title;
     this.description = description;
     this.price = price;
