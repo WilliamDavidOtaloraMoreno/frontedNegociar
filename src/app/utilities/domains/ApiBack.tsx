@@ -1,6 +1,6 @@
 const ApiBack = {
-     URL: "http://localhost:3123/api/",
-    // URL: "https://deploynegociar.onrender.com/api/",
+    //  URL: "http://localhost:3123/api/",
+    URL: "https://deploynegociar.onrender.com/api/",
 
     //Login
     LOGIN: "user/login",
@@ -14,6 +14,7 @@ const ApiBack = {
     PROPERTY_DElETE: "property/delete",
     PROPERTY_VIEW_ONE: "property/viewOne",
     PROPERTY_IMAGEN: "property/viewOneImagen",
+    PROPERTY_DELETE: "property/delete",
 
     PROPERTY_NEIGHOOD: "neighbor/view",
     PROPERTY_VIEW_CREATE: "property/create",

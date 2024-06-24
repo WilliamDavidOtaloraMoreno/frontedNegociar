@@ -52,35 +52,7 @@ export const Footer = () => {
                 </div>
               </div>
               <div className="footer-list-29 footer-2"></div>
-              <div className="footer-list-29 footer-3">
-                <div className="properties">
-                  <h6 className="footer-title-29">Propiedades Destacadas</h6>
-                  <Link to="#">
-                    <img
-                      src="assets/images/g7.jpg"
-                      className="img-responsive"
-                      alt=""
-                    />
-                    <p>We Are Leading International Consultiing Agency</p>
-                  </Link>
-                  <Link to="#">
-                    <img
-                      src="assets/images/g8.jpg"
-                      className="img-responsive"
-                      alt=""
-                    />
-                    <p>Digital Marketing Agency all the foundational tools</p>
-                  </Link>
-                  <Link to="#">
-                    <img
-                      src="assets/images/g9.jpg"
-                      className="img-responsive"
-                      alt=""
-                    />
-                    <p>Doloremque velit sapien labore eius itna</p>
-                  </Link>
-                </div>
-              </div>
+              
               <div className="footer-list-29 footer-4">
                 <ul>
                   <h6 className="footer-title-29">Enlaces Rapidos</h6>

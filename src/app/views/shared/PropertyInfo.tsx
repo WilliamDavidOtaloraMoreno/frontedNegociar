@@ -175,7 +175,7 @@ export const PropertyInfo = () => {
           </Modal>
 
           {/* Precio, descripción y buscador */}
-          <Row className="my-4">
+          <Row className="my-4 justify-content-center">
             <Col md={8}>
               <Card className="p-3 shadow-lg rounded">
                 <h2 className="text-primary">{myProperty.price}</h2>
@@ -193,7 +193,7 @@ export const PropertyInfo = () => {
                     <p className="text-secondary mb-1">
                       <FaBath size={18} /> Baños
                     </p>
-                    <p>{myProperty.bannos}</p>
+                    <p>3</p>
                   </Col>
                   <Col xs={6} sm={4}>
                     <p className="text-secondary mb-1">

@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { CompleteRouting } from './app/utilities/routes/CompleteRouting';
+import WhatsAppButton from './app/views/shared/WhatsApp';
 
 
 const loading = (
@@ -17,7 +18,7 @@ function App() {
         <Suspense fallback={loading}>
           {/* Go to routes where init aplication */}
           <CompleteRouting />
-          {/* <WhatsAppButton/> */}
+          <WhatsAppButton/>
         </Suspense>
       </BrowserRouter>
   );
